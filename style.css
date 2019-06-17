@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vh;
+  height: 50vh;
+  /* border: 2px solid black; */
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+}
+
+button {
+  width: 25%;
+  border: 0.5px solid black;
+  font-size: 3.5vh;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  transition: 0.1s;
+  outline: none;
+  background-color: #c7c7c7;
+}
+
+i {
+  width: 100%;
+  /* background-color: red; */
+  font-size: 3.5vh;
+  line-height: 7vh;
+}
+
+button:hover {
+  background-color: #ffbb24;
+}
+i::before {
+  line-height: 7vh;
+}
+.panel {
+  overflow-wrap: break-word;
+  word-break: break-all;
+
+  border: 0.5px solid black;
+}
+span {
+  display: block;
+  text-align: right;
+  margin: 1vh 1vw;
+  font-size: 5vh;
+  line-height: 5vh;
+}
+
+.first button {
+  flex-shrink: 0;
+}
+.first button:nth-child(3),
+.first button:nth-child(4) {
+  /* width: 12.5%; */
+  flex-shrink: 1;
+}
+.number {
+  background-color: #ebebeb;
+}
+
+@media (orientation: landscape) {
+  .container {
+    transform: translate(-50%, -50%);
+    width: 50vh;
+    height: 80vh;
+  }
+  button {
+    font-size: 3vw;
+  }
+  i {
+    font-size: 3vw;
+  }
+
+  span {
+    margin: 2vw 1vw;
+    font-size: 3.5vw;
+    line-height: 3.5vw;
+  }
+}
